@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct loginview: View {
+    let gradient = Gradient(colors: [.white, .red])
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack{
+                Spacer()
+                VStack{
+                    Image(systemName: "person.crop.circle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 150, height: 150)
+                        .cornerRadius(200)
+                        .clipShape(Circle())
+                        .clipped()
+                        .padding(.top, 44)
+                    Text("Bienvenido")
+                    Text("OURBANK")
+                }
+                Spacer()
+            }
+            Spacer()
+        }.background(LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom))
     }
 }
 
